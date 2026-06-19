@@ -1,0 +1,55 @@
+version: "3.8"
+
+services:
+  # ── PostgreSQL for metric storage ──────────────────────────
+  postgres:
+    image: postgres:15
+    container_name: monitor-db
+    environment:
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+      POSTGRES_DB: ${DB_NAME:-server_monitor}
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../sql/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ── Simulated servers ─────────────────────────────────────
+  server1:
+    image: ubuntu:22.04
+    container_name: sim-server-1
+    command: tail -f /dev/null
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+
+  server2:
+    image: ubuntu:22.04
+    container_name: sim-server-2
+    command: tail -f /dev/null
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+
+  server3:
+    image: ubuntu:22.04
+    container_name: sim-server-3
+    command: tail -f /dev/null
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+
+volumes:
+  pgdata:

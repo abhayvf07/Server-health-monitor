@@ -1,0 +1,158 @@
+2026-06-19 21:51:56,974 [INFO] __main__: ============================================================
+2026-06-19 21:51:56,975 [INFO] __main__: Monitor run started at 2026-06-19T16:21:56.975478
+2026-06-19 21:51:56,975 [INFO] __main__: Monitoring servers: sim-server-1, sim-server-2, sim-server-3
+2026-06-19 21:51:56,975 [INFO] __main__: ============================================================
+2026-06-19 21:51:57,318 [INFO] monitor.db: Database engine created: localhost:5433/server_monitor
+2026-06-19 21:51:57,526 [INFO] monitor.db: Database schema initialized successfully.
+2026-06-19 21:51:57,526 [INFO] __main__: Collecting metrics for sim-server-1...
+2026-06-19 21:52:07,554 [ERROR] monitor.collector: Timed out collecting metrics for sim-server-1
+2026-06-19 21:53:13,840 [INFO] __main__: ============================================================
+2026-06-19 21:53:13,841 [INFO] __main__: Monitor run started at 2026-06-19T16:23:13.841208+00:00
+2026-06-19 21:53:13,841 [INFO] __main__: Monitoring servers: sim-server-1, sim-server-2, sim-server-3
+2026-06-19 21:53:13,841 [INFO] __main__: ============================================================
+2026-06-19 21:53:13,943 [INFO] monitor.db: Database engine created: localhost:5433/server_monitor
+2026-06-19 21:53:14,122 [INFO] monitor.db: Database schema initialized successfully.
+2026-06-19 21:53:14,122 [INFO] __main__: Collecting metrics for sim-server-1...
+2026-06-19 21:53:22,704 [ERROR] monitor.collector: Collection failed for sim-server-1: /bin/bash: D:\Server Health Monitor\scheduler\..\monitor\..\scripts\collect_metrics.sh: No such file or directory
+
+2026-06-19 21:53:23,178 [INFO] __main__: Collecting metrics for sim-server-2...
+2026-06-19 21:53:23,482 [ERROR] monitor.collector: Collection failed for sim-server-2: /bin/bash: D:\Server Health Monitor\scheduler\..\monitor\..\scripts\collect_metrics.sh: No such file or directory
+
+2026-06-19 21:53:23,495 [INFO] __main__: Collecting metrics for sim-server-3...
+2026-06-19 21:53:23,966 [ERROR] monitor.collector: Collection failed for sim-server-3: /bin/bash: D:\Server Health Monitor\scheduler\..\monitor\..\scripts\collect_metrics.sh: No such file or directory
+
+2026-06-19 21:53:23,976 [INFO] __main__: Generating trend charts...
+2026-06-19 21:53:24,144 [WARNING] monitor.charts: No data to plot for sim-server-1
+2026-06-19 21:53:24,152 [WARNING] monitor.charts: No data to plot for sim-server-2
+2026-06-19 21:53:24,158 [WARNING] monitor.charts: No data to plot for sim-server-3
+2026-06-19 21:53:24,159 [INFO] __main__: ============================================================
+2026-06-19 21:53:24,159 [INFO] __main__: Run complete. Total breaches: 0
+2026-06-19 21:53:24,159 [INFO] __main__: ============================================================
+
+2026-06-19 21:59:21,870 [INFO] __main__: ============================================================
+2026-06-19 21:59:21,872 [INFO] __main__: Monitor run started at 2026-06-19T16:29:21.872148+00:00
+2026-06-19 21:59:21,872 [INFO] __main__: Monitoring servers: sim-server-1, sim-server-2, sim-server-3
+2026-06-19 21:59:21,872 [INFO] __main__: ============================================================
+2026-06-19 21:59:21,978 [INFO] monitor.db: Database engine created: localhost:5433/server_monitor
+2026-06-19 21:59:22,198 [INFO] monitor.db: Database schema initialized successfully.
+2026-06-19 21:59:22,198 [INFO] __main__: Collecting metrics for sim-server-1...
+2026-06-19 21:59:30,279 [ERROR] monitor.collector: Collection failed for sim-server-1: /bin/bash: /d/Server Health Monitor/scripts/collect_metrics.sh: No such file or directory
+
+2026-06-19 21:59:30,279 [ERROR] __main__:   [ERROR] Failed to process sim-server-1: Command '['bash', '/d/Server Health Monitor/scripts/collect_metrics.sh', 'sim-server-1']' returned non-zero exit status 127.
+2026-06-19 21:59:30,279 [INFO] __main__: Collecting metrics for sim-server-2...
+2026-06-19 21:59:30,460 [ERROR] monitor.collector: Collection failed for sim-server-2: /bin/bash: /d/Server Health Monitor/scripts/collect_metrics.sh: No such file or directory
+
+2026-06-19 21:59:30,460 [ERROR] __main__:   [ERROR] Failed to process sim-server-2: Command '['bash', '/d/Server Health Monitor/scripts/collect_metrics.sh', 'sim-server-2']' returned non-zero exit status 127.
+2026-06-19 21:59:30,461 [INFO] __main__: Collecting metrics for sim-server-3...
+2026-06-19 21:59:30,618 [ERROR] monitor.collector: Collection failed for sim-server-3: /bin/bash: /d/Server Health Monitor/scripts/collect_metrics.sh: No such file or directory
+
+2026-06-19 21:59:30,618 [ERROR] __main__:   [ERROR] Failed to process sim-server-3: Command '['bash', '/d/Server Health Monitor/scripts/collect_metrics.sh', 'sim-server-3']' returned non-zero exit status 127.
+2026-06-19 21:59:30,619 [INFO] __main__: Generating trend charts...
+2026-06-19 21:59:30,686 [WARNING] monitor.charts: No data to plot for sim-server-1
+2026-06-19 21:59:30,691 [WARNING] monitor.charts: No data to plot for sim-server-2
+2026-06-19 21:59:30,696 [WARNING] monitor.charts: No data to plot for sim-server-3
+2026-06-19 21:59:30,696 [INFO] __main__: ============================================================
+2026-06-19 21:59:30,696 [INFO] __main__: Run complete. Total breaches: 0
+2026-06-19 21:59:30,696 [INFO] __main__: ============================================================
+
+2026-06-19 22:02:00,562 [INFO] __main__: ============================================================
+2026-06-19 22:02:00,564 [INFO] __main__: Monitor run started at 2026-06-19T16:32:00.564021+00:00
+2026-06-19 22:02:00,564 [INFO] __main__: Monitoring servers: sim-server-1, sim-server-2, sim-server-3
+2026-06-19 22:02:00,564 [INFO] __main__: ============================================================
+2026-06-19 22:02:00,681 [INFO] monitor.db: Database engine created: localhost:5433/server_monitor
+2026-06-19 22:02:00,863 [INFO] monitor.db: Database schema initialized successfully.
+2026-06-19 22:02:00,863 [INFO] __main__: Collecting metrics for sim-server-1...
+2026-06-19 22:02:04,216 [ERROR] monitor.collector: Collection failed for sim-server-1: 
+2026-06-19 22:02:04,216 [ERROR] __main__:   [ERROR] Failed to process sim-server-1: Command '['C:/Program Files/Git/bin/bash.exe', '/d/Server Health Monitor/scripts/collect_metrics.sh', 'sim-server-1']' returned non-zero exit status 1.
+2026-06-19 22:02:04,217 [INFO] __main__: Collecting metrics for sim-server-2...
+2026-06-19 22:02:06,439 [ERROR] monitor.collector: Collection failed for sim-server-2: 
+2026-06-19 22:02:06,439 [ERROR] __main__:   [ERROR] Failed to process sim-server-2: Command '['C:/Program Files/Git/bin/bash.exe', '/d/Server Health Monitor/scripts/collect_metrics.sh', 'sim-server-2']' returned non-zero exit status 1.
+2026-06-19 22:02:06,440 [INFO] __main__: Collecting metrics for sim-server-3...
+2026-06-19 22:02:08,606 [ERROR] monitor.collector: Collection failed for sim-server-3: 
+2026-06-19 22:02:08,606 [ERROR] __main__:   [ERROR] Failed to process sim-server-3: Command '['C:/Program Files/Git/bin/bash.exe', '/d/Server Health Monitor/scripts/collect_metrics.sh', 'sim-server-3']' returned non-zero exit status 1.
+2026-06-19 22:02:08,606 [INFO] __main__: Generating trend charts...
+2026-06-19 22:02:08,647 [WARNING] monitor.charts: No data to plot for sim-server-1
+2026-06-19 22:02:08,652 [WARNING] monitor.charts: No data to plot for sim-server-2
+2026-06-19 22:02:08,656 [WARNING] monitor.charts: No data to plot for sim-server-3
+2026-06-19 22:02:08,657 [INFO] __main__: ============================================================
+2026-06-19 22:02:08,657 [INFO] __main__: Run complete. Total breaches: 0
+2026-06-19 22:02:08,657 [INFO] __main__: ============================================================
+
+2026-06-19 22:05:08,280 [INFO] __main__: ============================================================
+2026-06-19 22:05:08,282 [INFO] __main__: Monitor run started at 2026-06-19T16:35:08.282557+00:00
+2026-06-19 22:05:08,282 [INFO] __main__: Monitoring servers: sim-server-1, sim-server-2, sim-server-3
+2026-06-19 22:05:08,282 [INFO] __main__: ============================================================
+2026-06-19 22:05:08,346 [INFO] monitor.db: Database engine created: localhost:5433/server_monitor
+2026-06-19 22:05:08,472 [INFO] monitor.db: Database schema initialized successfully.
+2026-06-19 22:05:08,472 [INFO] __main__: Collecting metrics for sim-server-1...
+2026-06-19 22:05:10,302 [INFO] monitor.collector: Collected: sim-server-1 -- CPU=0.00%, MEM=0.33%, DISK=1%
+2026-06-19 22:05:10,328 [INFO] monitor.db: Metrics inserted for sim-server-1
+2026-06-19 22:05:10,328 [INFO] __main__:   [OK] sim-server-1: All metrics within thresholds
+2026-06-19 22:05:10,328 [INFO] __main__: Collecting metrics for sim-server-2...
+2026-06-19 22:05:12,292 [INFO] monitor.collector: Collected: sim-server-2 -- CPU=0.00%, MEM=0.26%, DISK=1%
+2026-06-19 22:05:12,296 [INFO] monitor.db: Metrics inserted for sim-server-2
+2026-06-19 22:05:12,296 [INFO] __main__:   [OK] sim-server-2: All metrics within thresholds
+2026-06-19 22:05:12,297 [INFO] __main__: Collecting metrics for sim-server-3...
+2026-06-19 22:05:14,305 [INFO] monitor.collector: Collected: sim-server-3 -- CPU=0.01%, MEM=0.08%, DISK=1%
+2026-06-19 22:05:14,310 [INFO] monitor.db: Metrics inserted for sim-server-3
+2026-06-19 22:05:14,310 [INFO] __main__:   [OK] sim-server-3: All metrics within thresholds
+2026-06-19 22:05:14,310 [INFO] __main__: Generating trend charts...
+2026-06-19 22:05:14,678 [INFO] monitor.charts: Chart saved: D:\Server Health Monitor\scheduler\..\charts_output\sim-server-1_trend.png
+2026-06-19 22:05:14,831 [INFO] monitor.charts: Chart saved: D:\Server Health Monitor\scheduler\..\charts_output\sim-server-2_trend.png
+2026-06-19 22:05:15,000 [INFO] monitor.charts: Chart saved: D:\Server Health Monitor\scheduler\..\charts_output\sim-server-3_trend.png
+2026-06-19 22:05:15,000 [INFO] __main__: ============================================================
+2026-06-19 22:05:15,000 [INFO] __main__: Run complete. Total breaches: 0
+2026-06-19 22:05:15,000 [INFO] __main__: ============================================================
+
+2026-06-19 22:20:56,180 [INFO] __main__: ============================================================
+2026-06-19 22:20:56,182 [INFO] __main__: Monitor run started at 2026-06-19T16:50:56.182250+00:00
+2026-06-19 22:20:56,182 [INFO] __main__: Monitoring servers: sim-server-1, sim-server-2, sim-server-3
+2026-06-19 22:20:56,183 [INFO] __main__: ============================================================
+2026-06-19 22:20:56,325 [INFO] monitor.db: Database engine created: localhost:5433/server_monitor
+2026-06-19 22:20:56,652 [INFO] monitor.db: Database schema initialized successfully.
+2026-06-19 22:20:56,652 [INFO] __main__: Collecting metrics for sim-server-1...
+2026-06-19 22:20:59,695 [INFO] monitor.collector: Collected: sim-server-1 -- CPU=0.01%, MEM=0.29%, DISK=1%
+2026-06-19 22:20:59,717 [INFO] monitor.db: Metrics inserted for sim-server-1
+2026-06-19 22:20:59,718 [INFO] __main__:   [OK] sim-server-1: All metrics within thresholds
+2026-06-19 22:20:59,718 [INFO] __main__: Collecting metrics for sim-server-2...
+2026-06-19 22:21:02,312 [INFO] monitor.collector: Collected: sim-server-2 -- CPU=0.01%, MEM=0.31%, DISK=1%
+2026-06-19 22:21:02,321 [INFO] monitor.db: Metrics inserted for sim-server-2
+2026-06-19 22:21:02,322 [INFO] __main__:   [OK] sim-server-2: All metrics within thresholds
+2026-06-19 22:21:02,322 [INFO] __main__: Collecting metrics for sim-server-3...
+2026-06-19 22:21:05,285 [INFO] monitor.collector: Collected: sim-server-3 -- CPU=0.00%, MEM=0.31%, DISK=1%
+2026-06-19 22:21:05,291 [INFO] monitor.db: Metrics inserted for sim-server-3
+2026-06-19 22:21:05,292 [INFO] __main__:   [OK] sim-server-3: All metrics within thresholds
+2026-06-19 22:21:05,292 [INFO] __main__: Generating trend charts...
+2026-06-19 22:21:05,614 [INFO] monitor.charts: Chart saved: D:\Server Health Monitor\scheduler\..\charts_output\sim-server-1_trend.png
+2026-06-19 22:21:05,835 [INFO] monitor.charts: Chart saved: D:\Server Health Monitor\scheduler\..\charts_output\sim-server-2_trend.png
+2026-06-19 22:21:06,029 [INFO] monitor.charts: Chart saved: D:\Server Health Monitor\scheduler\..\charts_output\sim-server-3_trend.png
+2026-06-19 22:21:06,029 [INFO] __main__: ============================================================
+2026-06-19 22:21:06,029 [INFO] __main__: Run complete. Total breaches: 0
+2026-06-19 22:21:06,029 [INFO] __main__: ============================================================
+
+2026-06-19 22:25:38,462 [INFO] __main__: ============================================================
+2026-06-19 22:25:38,466 [INFO] __main__: Monitor run started at 2026-06-19T16:55:38.466258+00:00
+2026-06-19 22:25:38,466 [INFO] __main__: Monitoring servers: sim-server-1, sim-server-2, sim-server-3
+2026-06-19 22:25:38,466 [INFO] __main__: ============================================================
+2026-06-19 22:25:38,551 [INFO] monitor.db: Database engine created: localhost:5433/server_monitor
+2026-06-19 22:25:38,753 [INFO] monitor.db: Database schema initialized successfully.
+2026-06-19 22:25:38,753 [INFO] __main__: Collecting metrics for sim-server-1...
+2026-06-19 22:25:41,235 [INFO] monitor.collector: Collected: sim-server-1 -- CPU=0.00%, MEM=0.28%, DISK=1%
+2026-06-19 22:25:41,262 [INFO] monitor.db: Metrics inserted for sim-server-1
+2026-06-19 22:25:41,262 [INFO] __main__:   [OK] sim-server-1: All metrics within thresholds
+2026-06-19 22:25:41,262 [INFO] __main__: Collecting metrics for sim-server-2...
+2026-06-19 22:25:43,510 [INFO] monitor.collector: Collected: sim-server-2 -- CPU=0.00%, MEM=0.23%, DISK=1%
+2026-06-19 22:25:43,515 [INFO] monitor.db: Metrics inserted for sim-server-2
+2026-06-19 22:25:43,515 [INFO] __main__:   [OK] sim-server-2: All metrics within thresholds
+2026-06-19 22:25:43,515 [INFO] __main__: Collecting metrics for sim-server-3...
+2026-06-19 22:25:46,537 [INFO] monitor.collector: Collected: sim-server-3 -- CPU=0.00%, MEM=0.36%, DISK=1%
+2026-06-19 22:25:46,543 [INFO] monitor.db: Metrics inserted for sim-server-3
+2026-06-19 22:25:46,544 [INFO] __main__:   [OK] sim-server-3: All metrics within thresholds
+2026-06-19 22:25:46,544 [INFO] __main__: Generating trend charts...
+2026-06-19 22:25:46,945 [INFO] monitor.charts: Chart saved: D:\Server Health Monitor\scheduler\..\charts_output\sim-server-1_trend.png
+2026-06-19 22:25:47,075 [INFO] monitor.charts: Chart saved: D:\Server Health Monitor\scheduler\..\charts_output\sim-server-2_trend.png
+2026-06-19 22:25:47,225 [INFO] monitor.charts: Chart saved: D:\Server Health Monitor\scheduler\..\charts_output\sim-server-3_trend.png
+2026-06-19 22:25:47,225 [INFO] __main__: ============================================================
+2026-06-19 22:25:47,225 [INFO] __main__: Run complete. Total breaches: 0
+2026-06-19 22:25:47,225 [INFO] __main__: ============================================================
+

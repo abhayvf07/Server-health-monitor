@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Server Health Monitor — Real-time CPU, memory, and disk monitoring dashboard for Docker container clusters.">
+    <title>Server Health Monitor — Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- ─── Header ────────────────────────────────────────────────────── -->
+    <header class="header" id="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <rect x="2" y="2" width="24" height="24" rx="6" stroke="url(#logoGrad)" stroke-width="2"/>
+                        <circle cx="9" cy="14" r="2" fill="#00d4ff"/>
+                        <circle cx="14" cy="14" r="2" fill="#a855f7"/>
+                        <circle cx="19" cy="14" r="2" fill="#f97316"/>
+                        <line x1="9" y1="8" x2="9" y2="11" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="14" y1="6" x2="14" y2="11" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="19" y1="9" x2="19" y2="11" stroke="#f97316" stroke-width="1.5" stroke-linecap="round"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="2" y1="2" x2="26" y2="26">
+                                <stop stop-color="#00d4ff"/>
+                                <stop offset="1" stop-color="#a855f7"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div>
+                    <h1>Server Health Monitor</h1>
+                    <p class="header-subtitle">Docker Cluster Dashboard</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="auto-refresh-toggle" id="autoRefreshToggle">
+                <div class="toggle-track">
+                    <div class="toggle-thumb"></div>
+                </div>
+                <span>Auto-refresh</span>
+                <span class="countdown" id="countdown"></span>
+            </div>
+            <button class="btn btn-primary" id="collectBtn" onclick="triggerCollect()">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M14 8A6 6 0 1 1 8 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M8 2V5L10.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Collect Now
+            </button>
+        </div>
+    </header>
+
+    <!-- ─── Main Content ──────────────────────────────────────────────── -->
+    <main class="main">
+
+        <!-- Status bar -->
+        <div class="status-bar" id="statusBar">
+            <div class="status-indicator online" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span id="statusText">Connecting...</span>
+            </div>
+            <span class="last-updated" id="lastUpdated"></span>
+        </div>
+
+        <!-- Server Cards -->
+        <section class="section" id="serversSection">
+            <h2 class="section-title">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="2" y="3" width="16" height="5" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="2" y="12" width="16" height="5" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="5.5" cy="5.5" r="1" fill="currentColor"/>
+                    <circle cx="5.5" cy="14.5" r="1" fill="currentColor"/>
+                </svg>
+                Server Fleet
+            </h2>
+            <div class="server-grid" id="serverGrid">
+                <!-- Populated by JS -->
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </section>
+
+        <!-- Trend Charts -->
+        <section class="section" id="chartsSection">
+            <h2 class="section-title">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <polyline points="2,16 6,10 10,13 14,6 18,9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Resource Trends
+            </h2>
+            <div class="charts-grid" id="chartsGrid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Alert History -->
+        <section class="section" id="alertsSection">
+            <h2 class="section-title">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 2L18 16H2L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    <line x1="10" y1="7" x2="10" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="10" cy="13.5" r="0.75" fill="currentColor"/>
+                </svg>
+                Alert History
+                <span class="badge" id="alertCount">0</span>
+            </h2>
+            <div class="alerts-container glass-card" id="alertsContainer">
+                <table class="alerts-table" id="alertsTable">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Server</th>
+                            <th>Metric</th>
+                            <th>Value</th>
+                            <th>Threshold</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alertsBody">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+                <div class="empty-state" id="alertsEmpty">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" opacity="0.3">
+                        <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                        <path d="M16 24L22 30L32 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p>No alerts — all systems healthy</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ─── Toast Container ───────────────────────────────────────────── -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

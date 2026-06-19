@@ -1,0 +1,8 @@
+# Server Health Monitor — Dependencies
+psycopg2-binary==2.9.9
+SQLAlchemy==2.0.30
+pandas==2.2.2
+matplotlib==3.9.0
+requests==2.32.3
+flask==3.0.3
+python-dotenv==1.0.1
